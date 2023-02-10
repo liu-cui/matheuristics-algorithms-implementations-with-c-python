@@ -1,3 +1,10 @@
 # matheuristics-algorithms-implementations-with-python
 
-观察-》问题-》假设-》实验-》结论-》结果-》观察-》...
+- observe 
+- question
+- assumption
+- experiment
+- conclusion
+- result
+- observe
+- ...
