@@ -3,7 +3,7 @@ import copy
 import random
 
 
-def load_data(file_path):
+def build_data(file_path):
     location = []
     with open(file_path) as f:
         for line in f:
@@ -42,7 +42,7 @@ def calculate_sequence_cost(sequence, distance):
     return seq_cost
 
 
-def adjacent_sequence(sequence):
+def generate_adjacent_sequence(sequence):
     exchange_number_list = random.sample(range(0, len(sequence)), 2)
     exchange_number_list.sort()
     exchange_seq = sequence[exchange_number_list[0]: exchange_number_list[1]]
@@ -59,5 +59,5 @@ if __name__ == '__main__':
     input_file_path = root_path + file
     print(root_path)
     print(input_file_path)
-    print(load_data(input_file_path))
+    print(build_data(input_file_path))
     print(generate_sequence(4))
