@@ -1,7 +1,9 @@
 # matheuristics-algorithms-implementations-with-python
 
 ## to do list
-- [] wiki 
+- [x] ~~predatory-algorithm~~
+- [ ] wiki build 
+- [ ] rebuild the predatory-algorithm
 
 ## study step 
 - observe 
