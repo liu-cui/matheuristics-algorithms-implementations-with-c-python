@@ -1,5 +1,9 @@
 # matheuristics-algorithms-implementations-with-python
 
+## to do list
+- [] wiki 
+
+## study step 
 - observe 
 - question
 - assumption
@@ -8,3 +12,4 @@
 - result
 - observe
 - ...
+
