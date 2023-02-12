@@ -1,4 +1,3 @@
-import logging
 import tsplib95
 
 
@@ -19,5 +18,9 @@ if __name__ == '__main__':
     edge = 3, 8
     weight = problem.get_weight(*edge)
     print(f'The driving distance from node {edge[0]} to node {edge[1]} is {weight}.')
+    print()
+    G = problem.get_graph()
+    print(G.nodes)
+    print(G.graph)
 
 
