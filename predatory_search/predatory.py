@@ -75,6 +75,7 @@ def restriction_level(sequence, distance, number_level):
 def solve(file_path, param):
     location_list = build_data(file_path)
     n = len(location_list)
+    print(n)
     distance = build_distance_matrix(location_list)
     best_seq = generate_sequence(n)
     best_cost = calculate_sequence_cost(best_seq, distance)

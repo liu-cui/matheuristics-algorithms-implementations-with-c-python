@@ -3,11 +3,13 @@ import math
 
 def distance_matrix(nodes_coordinates):
     n = len(nodes_coordinates)
+    nodes = [waypoint(coord) for coord in nodes_coordinates]
     dist = [[0 for _ in range(n)] for _ in range(n)]
     for i in range(n):
         for j in range(n):
-            dist[i][j] = distance(nodes_coordinates[i], nodes_coordinates[j])
+            dist[i][j] = distance(nodes[i], nodes[j])
     return dist
+
 
 def waypoint(coordinates):
     return {"lat": coordinates[0], "lng": coordinates[1]}
@@ -28,7 +30,7 @@ def total_distance(waypoints, method=None):
 
 
 def distance(start, end):
-    xd = start["lng"] - end["lat"]
-    yd = end["lng"] - end["lat"]
-    dij = math.sqrt(xd ** xd + yd ** yd)
+    xd = start["lat"] - end["lat"]
+    yd = end["lng"] - end["lng"]
+    dij = math.sqrt(xd * xd + yd * yd)
     return dij
