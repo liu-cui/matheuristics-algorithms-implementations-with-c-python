@@ -20,3 +20,4 @@ if __name__ == '__main__':
     weight = problem.get_weight(*edge)
     print(f'The driving distance from node {edge[0]} to node {edge[1]} is {weight}.')
 
+
