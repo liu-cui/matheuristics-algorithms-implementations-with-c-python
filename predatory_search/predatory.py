@@ -1,6 +1,7 @@
 import os
 import copy
 import random
+
 from parameter import Parameter
 
 
@@ -117,10 +118,10 @@ def solve(file_path, param):
 
 if __name__ == '__main__':
     file = r"/resources/berlin52.txt"
+    parameter = Parameter()
     cur_path = os.path.abspath(os.path.dirname(__file__))
     root_path = os.path.dirname(os.path.dirname(__file__))
     input_file_path = root_path + file
-    parameter = Parameter()
     location = build_data(input_file_path)
     dist = build_distance_matrix(location)
     seq = generate_sequence(len(location))
