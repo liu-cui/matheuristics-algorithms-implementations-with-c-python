@@ -1,6 +1,14 @@
 import math
 
 
+def distance_matrix(nodes_coordinates):
+    n = len(nodes_coordinates)
+    dist = [[0 for _ in range(n)] for _ in range(n)]
+    for i in range(n):
+        for j in range(n):
+            dist[i][j] = distance(nodes_coordinates[i], nodes_coordinates[j])
+    return dist
+
 def waypoint(coordinates):
     return {"lat": coordinates[0], "lng": coordinates[1]}
 
@@ -14,12 +22,12 @@ def driving_distance(start, end):
 
 def total_distance(waypoints, method=None):
     if method == "driving":
-        return distance(waypoints)
+        start = waypoints[0]
+        end = waypoints[1]
+        return distance(start, end)
 
 
-def distance(waypoints):
-    start = waypoints[0]
-    end = waypoints[1]
+def distance(start, end):
     xd = start["lng"] - end["lat"]
     yd = end["lng"] - end["lat"]
     dij = math.sqrt(xd ** xd + yd ** yd)
