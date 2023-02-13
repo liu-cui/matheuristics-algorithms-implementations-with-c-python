@@ -31,6 +31,6 @@ def total_distance(waypoints, method=None):
 
 def distance(start, end):
     xd = start["lat"] - end["lat"]
-    yd = end["lng"] - end["lng"]
+    yd = start["lng"] - end["lng"]
     dij = math.sqrt(xd * xd + yd * yd)
     return dij
