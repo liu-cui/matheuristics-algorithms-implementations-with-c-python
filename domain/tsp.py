@@ -28,3 +28,8 @@ class Problem:
     def get_type(self):
         return self.problem.as_name_dict()["type"]
 
+
+class Solution:
+    def __init__(self):
+        pass
+
