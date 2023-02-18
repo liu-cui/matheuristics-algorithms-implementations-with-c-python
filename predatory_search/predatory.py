@@ -2,6 +2,7 @@ import random
 import copy
 
 from util.helpers import distance_matrix
+from config.log import logger
 
 
 class Predatory:
@@ -62,8 +63,10 @@ class Predatory:
         cur_restriction_level = self.restriction_level(best_seq, self.n_limit)
         solution = best_seq
         cost_trend_list = [best_cost]
-        print("before opt random initial sequence: \n", best_seq)
-        print("before opt random initial sequence cost: ", best_cost)
+        logger.info("before opt random initial sequence")
+        logger.info(best_seq)
+        logger.info("before opt random initial sequence cost")
+        logger.info(best_cost)
         l = 0
         count = 0
         while l < n:
@@ -92,6 +95,8 @@ class Predatory:
                     count = 0
                     l += 1
                     break
-        print("after opt best sequence: \n", best_seq)
-        print("after opt best sequence cost is: ", best_cost)
+        logger.info("after opt best sequence")
+        logger.info(best_seq)
+        logger.info("after opt best sequence cost is")
+        logger.info(best_cost)
 
